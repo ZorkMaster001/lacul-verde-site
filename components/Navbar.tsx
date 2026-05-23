@@ -10,6 +10,7 @@ const navItems = [
   { href: '/', label: 'Acasă' },
   { href: '/specii', label: 'Specii Pești' },
   { href: '/pret', label: 'Tarife' },
+  { href: '/capturi', label: 'Capturi' },
 ];
 
 const Navbar = () => {
