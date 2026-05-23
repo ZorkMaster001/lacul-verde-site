@@ -5,12 +5,12 @@ import { Calendar, Scale } from "lucide-react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 
-import poza1 from "@/images/capturi/poza1.jpg";
-import poza2 from "@/images/capturi/poza2.jpg";
-import poza3 from "@/images/capturi/poza3.jpg";
-import poza4 from "@/images/capturi/poza4.jpg";
-import poza5 from "@/images/capturi/poza5.jpg";
-import poza6 from "@/images/capturi/poza6.jpg";
+import poza1 from "@/src/images/capturi/poza1.jpg";
+import poza2 from "@/src/images/capturi/poza2.jpg";
+import poza3 from "@/src/images/capturi/poza3.jpg";
+import poza4 from "@/src/images/capturi/poza4.jpg";
+import poza5 from "@/src/images/capturi/poza5.jpg";
+import poza6 from "@/src/images/capturi/poza6.jpg";
 
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number];
 
