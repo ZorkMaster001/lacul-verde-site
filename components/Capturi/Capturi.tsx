@@ -84,14 +84,16 @@ export default function CapturiPage() {
             transition={{ duration: 0.45, delay: i * 0.08, ease: EASE }}
             className="group flex flex-col overflow-hidden rounded-3xl border border-outline-variant/30 bg-white shadow-sm"
           >
-            <img
-              src={poza.src}
-              alt={poza.alt ?? poza.fish}
-              style={{ width: "100%", height: "auto", display: "block" }}
-              className="transition-transform duration-300 group-hover:scale-110"
-            />
+            <div style={{ height: "320px", overflow: "hidden" }}>
+              <img
+                src={poza.src}
+                alt={poza.alt ?? poza.fish}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
 
-            <div className="flex flex-1 flex-col p-6">
+            <div className="flex flex-1 flex-col justify-end p-6">
               <h2 className="text-2xl font-bold text-primary">{poza.fish}</h2>
               <div className="mt-3 flex items-center gap-2 text-sm font-bold text-tertiary">
                 <Scale className="h-5 w-5" />
