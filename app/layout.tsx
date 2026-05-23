@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   verification: {
-    google: "48d3a8476c6d5121",
+    google: "rZxHMPDfmhcE7HX4_-AXHeSjgPgbr2chf3CMFtRhedo",
   },
   robots: {
     index: true,
