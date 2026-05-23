@@ -2,11 +2,38 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Scale } from "lucide-react";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+
+import poza1 from "@/images/capturi/poza1.jpg";
+import poza2 from "@/images/capturi/poza2.jpg";
+import poza3 from "@/images/capturi/poza3.jpg";
+import poza4 from "@/images/capturi/poza4.jpg";
+import poza5 from "@/images/capturi/poza5.jpg";
+import poza6 from "@/images/capturi/poza6.jpg";
 
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: EASE },
+  },
+};
+
 type Poza = {
-  src: string;
+  src: StaticImageData;
   fish: string;
   weight: string;
   date: string;
@@ -15,42 +42,42 @@ type Poza = {
 
 const poze: Poza[] = [
   {
-    src: "/capturi/poza1.jpg",
+    src: poza1,
     fish: "Crap",
     weight: "9 kg",
     date: "Lacul Verde Sâncrai",
     alt: "Captură Crap",
   },
   {
-    src: "/capturi/poza2.jpg",
+    src: poza2,
     fish: "Somn ",
     weight: "17 kg",
     date: "Lacul Verde Sâncrai",
     alt: "Captură Somn",
   },
   {
-    src: "/capturi/poza3.jpg",
+    src: poza3,
     fish: "Somn",
     weight: "7 kg",
     date: "Lacul Verde Sâncrai",
     alt: "Captură Somn",
   },
   {
-    src: "/capturi/poza4.jpg",
+    src: poza4,
     fish: "Amur",
     weight: "9,5 kg",
     date: "Lacul Verde Sâncrai",
     alt: "Captură Amur",
   },
   {
-    src: "/capturi/poza5.jpg",
+    src: poza5,
     fish: "Somn",
     weight: "23 kg",
     date: "Lacul Verde Sâncrai",
     alt: "Captură Somn",
   },
   {
-    src: "/capturi/poza6.jpg",
+    src: poza6,
     fish: "Somn",
     weight: "6 kg",
     date: "Lacul Verde Sâncrai",
@@ -74,21 +101,26 @@ export default function CapturiPage() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+      >
         {poze.map((poza, i) => (
           <motion.article
-            key={`${poza.src}-${i}`}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.45, delay: i * 0.08, ease: EASE }}
+            key={i}
+            variants={cardVariants}
             className="group flex flex-col overflow-hidden rounded-3xl border border-outline-variant/30 bg-white shadow-sm"
           >
-            <div style={{ height: "320px", overflow: "hidden" }}>
-              <img
+            <div style={{ height: "320px", overflow: "hidden", position: "relative" }}>
+              <Image
                 src={poza.src}
                 alt={poza.alt ?? poza.fish}
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                style={{ objectFit: "cover", objectPosition: "center" }}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
             </div>
@@ -106,7 +138,7 @@ export default function CapturiPage() {
             </div>
           </motion.article>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

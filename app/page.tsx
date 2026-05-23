@@ -1,13 +1,16 @@
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 import HomePage from "@/components/Home";
-import Navbar from "@/components/Navbar";
-import Species from "@/components/Species";
-import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Lacul Verde Sâncrai de Mureș | Pescuit Sportiv",
+  description: "Lacul Verde din Sâncrai de Mureș — pescuit sportiv dedicat pescarilor pasionați. Crap, somn, amur, șalău și știucă în condiții de top.",
+  alternates: { canonical: "https://www.laculverde.com" },
+};
 
 export default function Home() {
   return (
     <div>
-        <HomePage />
+      <HomePage />
     </div>
   );
 }
