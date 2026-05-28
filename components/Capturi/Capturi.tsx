@@ -11,6 +11,12 @@ import poza3 from "../../src/images/capturi/poza3.jpg";
 import poza4 from "../../src/images/capturi/poza4.jpg";
 import poza5 from "../../src/images/capturi/poza5.jpg";
 import poza6 from "../../src/images/capturi/poza6.jpg";
+import poza7 from "../../src/images/capturi/poza7.jpg";
+import poza8 from "../../src/images/capturi/poza8.jpg";
+import poza9 from "../../src/images/capturi/poza9.jpg";
+import poza10 from "../../src/images/capturi/poza10.jpg";
+import poza11 from "../../src/images/capturi/poza11.jpg";
+import poza12 from "../../src/images/capturi/poza12.jpg";
 
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number];
 
@@ -83,6 +89,48 @@ const poze: Poza[] = [
     date: "Lacul Verde Sâncrai",
     alt: "Captură Somn",
   },
+  {
+    src: poza7,
+    fish: "Crap",
+    weight: "6 kg",
+    date: "Lacul Verde Sâncrai",
+    alt: "Captură Crap",
+  },
+  {
+    src: poza8,
+    fish: "Amur",
+    weight: "3 kg",
+    date: "Lacul Verde Sâncrai",
+    alt: "Captură Amur",
+  },
+  {
+    src: poza9,
+    fish: "Somn",
+    weight: "9 kg",
+    date: "Lacul Verde Sâncrai",
+    alt: "Captură Somn",
+  },
+  {
+    src: poza10,
+    fish: "Crap",
+    weight: "5 kg",
+    date: "Lacul Verde Sâncrai",
+    alt: "Captură Crap",
+  },
+  {
+    src: poza11,
+    fish: "Amur",
+    weight: "9 kg",
+    date: "Lacul Verde Sâncrai",
+    alt: "Captură Amur",
+  },
+  {
+    src: poza12,
+    fish: "Somn",
+    weight: "19 kg",
+    date: "Lacul Verde Sâncrai",
+    alt: "Captură Somn",
+  },
 ];
 
 export default function CapturiPage() {
@@ -114,14 +162,14 @@ export default function CapturiPage() {
             variants={cardVariants}
             className="group flex flex-col overflow-hidden rounded-3xl border border-outline-variant/30 bg-white shadow-sm"
           >
-            <div style={{ height: "320px", overflow: "hidden", position: "relative" }}>
+            <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden" }}>
               <Image
                 src={poza.src}
                 alt={poza.alt ?? poza.fish}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 style={{ objectFit: "cover", objectPosition: "center" }}
-                className="transition-transform duration-300 group-hover:scale-110"
+                className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
 
