@@ -7,6 +7,7 @@ import crap from "@/src/images/carp.png"
 import Image from "next/image"
 import caras from "@/src/images/caras.png"
 import stiuca from "@/src/images/stiuca.jpeg"
+import amur from "@/src/images/amur.jpg"
 
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
@@ -103,6 +104,20 @@ export default function Species() {
             <div className="mt-6 flex items-center gap-2 text-sm font-bold text-tertiary">
               <Droplets className="h-5 w-5" /> Activ în ape reci
             </div>
+          </div>
+        </motion.div>
+
+        {/* Amur — slides from left */}
+        <motion.div {...slideIn(true, 0.25)} className="lg:col-span-12 overflow-hidden rounded-3xl bg-white shadow-sm border border-outline-variant/30 flex flex-col md:flex-row group">
+          <div className="h-64 md:h-auto md:w-2/5 overflow-hidden">
+            <Image src={amur} alt="Amur" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
+          </div>
+          <div className="p-8 md:w-3/5 flex flex-col justify-center">
+            <span className="mb-4 inline-block w-fit rounded-full bg-primary-container px-3 py-1 text-xs font-bold text-primary-fixed">Activ & Agil</span>
+            <h2 className="text-4xl font-bold text-primary">Amur</h2>
+            <p className="mt-4 text-on-surface-variant leading-relaxed">
+              Cunoscut pentru viteza și agilitatea sa, Amurul curăță vegetația acvatică a lacului. Oferă o pescuire plăcută și accesibilă oricărui pescar, de la începători la avansați.
+            </p>
           </div>
         </motion.div>
 
