@@ -47,30 +47,23 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "SportsActivityLocation"],
-  name: "Lacul Verde Sâncrai",
-  description: "Lac de pescuit sportiv în Sâncrai de Mureș, cu crap, somn, știucă și caras.",
+  "@type": "LocalBusiness",
+  name: "Lacul Verde Sâncraiu de Mureș",
+  description: "Lac de pescuit sportiv în Sâncraiu de Mureș la 3 km de Târgu Mureș",
   url: "https://www.laculverde.com",
   telephone: "+40744523284",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Strada Principala 199B",
-    addressLocality: "Sâncrai de Mureș",
+    streetAddress: "Principala 199 B",
+    addressLocality: "Sâncraiu de Mureș",
     addressRegion: "Mureș",
     addressCountry: "RO",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 46.5444098,
-    longitude: 24.517671,
+    latitude: 46.544015,
+    longitude: 24.517271,
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    opens: "06:00",
-    closes: "20:00",
-  },
-  sameAs: ["https://facebook.com/lacul.verde"],
 };
 
 export default function RootLayout({

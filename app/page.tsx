@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import HomePage from "@/components/Home";
 
 export const metadata: Metadata = {
-  title: "Lacul Verde Sâncrai de Mureș | Pescuit Sportiv",
-  description: "Lacul Verde din Sâncrai de Mureș — pescuit sportiv dedicat pescarilor pasionați. Crap, somn, amur, șalău și știucă în condiții de top.",
+  title: "Lacul Verde Sâncraiu de Mureș | Pescuit Sportiv lângă Târgu Mureș",
+  description: "Lacul Verde din Sâncraiu de Mureș, la 3 km de Târgu Mureș. Pescuit sportiv — crap, somn, șalău, știucă. Două lacuri, inclusiv C&R. Rezervă acum sau sună: 0744 523 284.",
   alternates: { canonical: "https://www.laculverde.com" },
 };
 
